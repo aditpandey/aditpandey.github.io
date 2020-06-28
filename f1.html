@@ -25,12 +25,15 @@
 		if(Email==""||Email==null){
 			alert("Please enter Email to recieve report")
 		}
-		else{
+		else{	
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Email)){
 			alert("Thankyou for requesting PDF. You will recieve PDF within 10 minutes")
 			 axios.post('https://prod-16.centralindia.logic.azure.com:443/workflows/9ea3634ca67a4cfcaeacd2ea6915623e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Yb4s1aFCsP2xSUiBdlrqKgZkq1zv--OPybcUtJ-WITE', {
    			 email: Email,
   		})
-		
+		document.getElementById("email").value="";
+		}else{	alert("Please enter a valid email address")	
+			}
 		}
 	}
 	</script>

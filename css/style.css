@@ -67,15 +67,15 @@ ul {
   list-style: none; }
 
 a {
-  color: #141414;
+  color: white;
   text-decoration: none; }
 
 a:hover {
-  color: #141414;
+  color:white;
   text-decoration: none; }
 
 a:focus {
-  color: #141414;
+  color: white;
   text-decoration: none;
   outline: none; }
 
@@ -484,6 +484,8 @@ header {
         border: none !important;
         color: #fff !important; }
 
+        
+        
 /********Vertical Nav Sec CSS********/
 nav.navbar.navbar-default.vertical-nav {
   position: fixed;
